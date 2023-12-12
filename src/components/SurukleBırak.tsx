@@ -38,7 +38,7 @@ const DraggableTreeNode: React.FC<TreeNodeProps> = ({ node, moveNode }) => {
       }),
     });
   
-    const [{ isOver }, drop] = useDrop({
+    const [, drop] = useDrop({
       accept: 'NODE',
       drop: (item: { id: string; type: string }) => {
         moveNode(item.id, node.id);
